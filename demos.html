@@ -35,10 +35,10 @@
     <section class="py-20 px-4">
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                <span class="text-orange-600">交互式</span> 演示
+                <span class="text-orange-600">Interactive</span> Demos
             </h1>
             <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                通过实际编程体验Vibe Coding的强大效果
+                Experience the power of Vibe Coding through hands-on programming
             </p>
         </div>
     </section>
@@ -48,13 +48,13 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-wrap justify-center gap-4">
                 <button onclick="showDemo('javascript')" id="js-tab" class="px-6 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                    JavaScript 演示
+                    JavaScript Demo
                 </button>
                 <button onclick="showDemo('python')" id="python-tab" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                    Python 演示
+                    Python Demo
                 </button>
                 <button onclick="showDemo('data-processing')" id="data-tab" class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                    数据处理演示
+                    Data Processing Demo
                 </button>
             </div>
         </div>
@@ -63,37 +63,37 @@
     <!-- JavaScript Demo -->
     <section id="javascript-demo" class="py-16 px-4">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">JavaScript Vibe Coding 演示</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">JavaScript Vibe Coding Demo</h2>
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Vibe Coding Steps -->
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. 捕捉直觉</h3>
-                        <p class="text-gray-600 mb-4">问题：计算数组中每个数字的平方，并找出最大值</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Capture Intuition</h3>
+                        <p class="text-gray-600 mb-4">Problem: Calculate the square of each number in an array and find the maximum value</p>
                         <div class="bg-orange-50 p-3 rounded-lg">
-                            <p class="text-orange-800 text-sm">💡 直觉：需要遍历数组，计算平方，然后比较大小</p>
+                            <p class="text-orange-800 text-sm">💡 Intuition: Need to iterate through array, calculate squares, then compare values</p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. 快速草图</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Quick Sketch</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                输入: [1, 2, 3, 4, 5]<br>
-                                步骤: 平方 → [1, 4, 9, 16, 25]<br>
-                                输出: 最大值 = 25
+                                Input: [1, 2, 3, 4, 5]<br>
+                                Process: Square → [1, 4, 9, 16, 25]<br>
+                                Output: Maximum = 25
                             </p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. 提示词</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Build Prompts</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                如果数组不为空，那么：<br>
-                                - 使用map计算每个元素的平方<br>
-                                - 使用Math.max找出最大值<br>
-                                - 返回结果
+                                If array is not empty, then:<br>
+                                - Use map to calculate squares<br>
+                                - Use Math.max to find maximum<br>
+                                - Return result
                             </p>
                         </div>
                     </div>
@@ -101,18 +101,18 @@
                 
                 <!-- Code Editor -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. 实现代码</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. Implement Code</h3>
                     <div id="js-editor" class="h-64 border rounded-lg"></div>
                     <div class="mt-4 flex gap-4">
                         <button onclick="runJavaScript()" class="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                            运行代码
+                            Run Code
                         </button>
                         <button onclick="resetJavaScript()" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                            重置
+                            Reset
                         </button>
                     </div>
                     <div id="js-output" class="mt-4 p-4 bg-gray-50 rounded-lg min-h-[100px]">
-                        <p class="text-gray-500">点击"运行代码"查看结果...</p>
+                        <p class="text-gray-500">Click "Run Code" to see results...</p>
                     </div>
                 </div>
             </div>
@@ -122,39 +122,39 @@
     <!-- Python Demo -->
     <section id="python-demo" class="py-16 px-4 hidden">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Python Vibe Coding 演示</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Python Vibe Coding Demo</h2>
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Vibe Coding Steps -->
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. 捕捉直觉</h3>
-                        <p class="text-gray-600 mb-4">问题：分析文本中单词的频率，并可视化结果</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Capture Intuition</h3>
+                        <p class="text-gray-600 mb-4">Problem: Analyze word frequency in text and visualize results</p>
                         <div class="bg-orange-50 p-3 rounded-lg">
-                            <p class="text-orange-800 text-sm">💡 直觉：需要分词、计数、排序，然后绘制图表</p>
+                            <p class="text-orange-800 text-sm">💡 Intuition: Need to tokenize, count, sort, then create charts</p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. 快速草图</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Quick Sketch</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                输入: "hello world hello python"<br>
-                                分词: ["hello", "world", "hello", "python"]<br>
-                                计数: {"hello": 2, "world": 1, "python": 1}<br>
-                                排序: [("hello", 2), ("world", 1), ("python", 1)]
+                                Input: "hello world hello python"<br>
+                                Tokenize: ["hello", "world", "hello", "python"]<br>
+                                Count: {"hello": 2, "world": 1, "python": 1}<br>
+                                Sort: [("hello", 2), ("world", 1), ("python", 1)]
                             </p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. 提示词</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Build Prompts</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                如果文本不为空，那么：<br>
-                                - 转换为小写并分词<br>
-                                - 使用Counter统计频率<br>
-                                - 按频率降序排列<br>
-                                - 返回前N个结果
+                                If text is not empty, then:<br>
+                                - Convert to lowercase and tokenize<br>
+                                - Use Counter to count frequency<br>
+                                - Sort by frequency descending<br>
+                                - Return top N results
                             </p>
                         </div>
                     </div>
@@ -162,18 +162,18 @@
                 
                 <!-- Code Editor -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. 实现代码</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. Implement Code</h3>
                     <div id="python-editor" class="h-64 border rounded-lg"></div>
                     <div class="mt-4 flex gap-4">
                         <button onclick="runPython()" class="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                            运行代码
+                            Run Code
                         </button>
                         <button onclick="resetPython()" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                            重置
+                            Reset
                         </button>
                     </div>
                     <div id="python-output" class="mt-4 p-4 bg-gray-50 rounded-lg min-h-[100px]">
-                        <p class="text-gray-500">点击"运行代码"查看结果...</p>
+                        <p class="text-gray-500">Click "Run Code" to see results...</p>
                     </div>
                 </div>
             </div>
@@ -183,39 +183,39 @@
     <!-- Data Processing Demo -->
     <section id="data-processing-demo" class="py-16 px-4 hidden">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">数据处理 Vibe Coding 演示</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Data Processing Vibe Coding Demo</h2>
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Vibe Coding Steps -->
                 <div class="space-y-6">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. 捕捉直觉</h3>
-                        <p class="text-gray-600 mb-4">问题：处理学生成绩数据，计算平均分和等级分布</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">1. Capture Intuition</h3>
+                        <p class="text-gray-600 mb-4">Problem: Process student grade data, calculate average and grade distribution</p>
                         <div class="bg-orange-50 p-3 rounded-lg">
-                            <p class="text-orange-800 text-sm">💡 直觉：需要清洗数据、计算统计量、分类等级</p>
+                            <p class="text-orange-800 text-sm">💡 Intuition: Need to clean data, calculate statistics, categorize grades</p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. 快速草图</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">2. Quick Sketch</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                输入: [85, 92, 78, 96, 88, 91]<br>
-                                清洗: 过滤无效值<br>
-                                计算: 平均分 = 88.3<br>
-                                分类: A(90+), B(80-89), C(70-79)
+                                Input: [85, 92, 78, 96, 88, 91]<br>
+                                Clean: Filter invalid values<br>
+                                Calculate: Average = 88.3<br>
+                                Categorize: A(90+), B(80-89), C(70-79)
                             </p>
                         </div>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. 提示词</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">3. Build Prompts</h3>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <p class="text-sm text-gray-600 font-mono">
-                                如果数据有效，那么：<br>
-                                - 过滤掉无效分数(0-100范围)<br>
-                                - 计算平均分<br>
-                                - 按等级分类统计<br>
-                                - 返回统计结果
+                                If data is valid, then:<br>
+                                - Filter out invalid scores (0-100 range)<br>
+                                - Calculate average<br>
+                                - Categorize by grade level<br>
+                                - Return statistics
                             </p>
                         </div>
                     </div>
@@ -223,18 +223,18 @@
                 
                 <!-- Interactive Demo -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. 交互式演示</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">4. Interactive Demo</h3>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">输入成绩数据（用逗号分隔）</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Enter grade data (comma-separated)</label>
                             <input type="text" id="scores-input" value="85,92,78,96,88,91" 
                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
                         </div>
                         <button onclick="processScores()" class="w-full bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                            处理数据
+                            Process Data
                         </button>
                         <div id="scores-output" class="p-4 bg-gray-50 rounded-lg min-h-[200px]">
-                            <p class="text-gray-500">点击"处理数据"查看结果...</p>
+                            <p class="text-gray-500">Click "Process Data" to see results...</p>
                         </div>
                     </div>
                 </div>
@@ -245,10 +245,10 @@
     <!-- CTA Section -->
     <section class="py-16 px-4 bg-orange-600">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">体验完整的Vibe Coding流程</h2>
-            <p class="text-xl text-orange-100 mb-8">从直觉到代码，感受编程的新方式</p>
+            <h2 class="text-3xl font-bold text-white mb-6">Experience the Complete Vibe Coding Process</h2>
+            <p class="text-xl text-orange-100 mb-8">From intuition to code, feel the new way of programming</p>
             <a href="how.html" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                学习更多技巧
+                Learn More Techniques
             </a>
         </div>
     </section>
@@ -256,7 +256,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p>&copy; 2024 Vibe Coding Demo - CSIS6920 信息系统课程</p>
+            <p>&copy; 2024 Vibe Coding Demo - CSIS6920 Information Systems Course</p>
         </div>
     </footer>
 

@@ -1,18 +1,18 @@
-// Vibe Coding 主应用文件
+// Vibe Coding Main Application File
 
-// 主题切换功能
+// Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // 检查本地存储的主题设置
+    // Check local storage theme settings
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.add(savedTheme);
         updateThemeIcon(savedTheme);
     }
     
-    // 主题切换事件
+    // Theme toggle event
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
             if (body.classList.contains('dark')) {
@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 添加页面加载动画
+    // Add page load animations
     addPageAnimations();
 });
 
-// 更新主题图标
+// Update theme icon
 function updateThemeIcon(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
@@ -39,7 +39,7 @@ function updateThemeIcon(theme) {
     }
 }
 
-// 添加页面动画
+// Add page animations
 function addPageAnimations() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach((element, index) => {
@@ -47,7 +47,7 @@ function addPageAnimations() {
     });
 }
 
-// 平滑滚动到元素
+// Smooth scroll to element
 function scrollToElement(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
@@ -58,7 +58,7 @@ function scrollToElement(elementId) {
     }
 }
 
-// 显示通知
+// Show notification
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 ${getNotificationClass(type)}`;
@@ -72,7 +72,7 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// 获取通知样式类
+// Get notification style class
 function getNotificationClass(type) {
     const classes = {
         'success': 'bg-green-500 text-white',
@@ -83,7 +83,7 @@ function getNotificationClass(type) {
     return classes[type] || classes['info'];
 }
 
-// 复制文本到剪贴板
+// Copy text to clipboard
 async function copyToClipboard(text) {
     try {
         await navigator.clipboard.writeText(text);
@@ -93,7 +93,7 @@ async function copyToClipboard(text) {
     }
 }
 
-// 格式化代码
+// Format code
 function formatCode(code, language = 'javascript') {
     // 简单的代码格式化
     return code
@@ -103,12 +103,12 @@ function formatCode(code, language = 'javascript') {
         .trim();
 }
 
-// 验证代码语法（简单版本）
+// Validate code syntax (simple version)
 function validateCode(code, language = 'javascript') {
     const errors = [];
     
     if (language === 'javascript') {
-        // 检查基本语法错误
+        // Check basic syntax errors
         if (code.includes('function') && !code.includes('{')) {
             errors.push('函数缺少大括号');
         }
@@ -123,12 +123,12 @@ function validateCode(code, language = 'javascript') {
     };
 }
 
-// 生成随机ID
+// Generate random ID
 function generateId() {
     return Math.random().toString(36).substr(2, 9);
 }
 
-// 防抖函数
+// Debounce function
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -141,7 +141,7 @@ function debounce(func, wait) {
     };
 }
 
-// 节流函数
+// Throttle function
 function throttle(func, limit) {
     let inThrottle;
     return function() {
@@ -155,13 +155,13 @@ function throttle(func, limit) {
     };
 }
 
-// 本地存储工具
+// Local storage utilities
 const Storage = {
     set: function(key, value) {
         try {
             localStorage.setItem(key, JSON.stringify(value));
         } catch (e) {
-            console.error('存储失败:', e);
+            console.error('Storage failed:', e);
         }
     },
     
@@ -170,7 +170,7 @@ const Storage = {
             const item = localStorage.getItem(key);
             return item ? JSON.parse(item) : defaultValue;
         } catch (e) {
-            console.error('读取失败:', e);
+            console.error('Read failed:', e);
             return defaultValue;
         }
     },
@@ -179,12 +179,12 @@ const Storage = {
         try {
             localStorage.removeItem(key);
         } catch (e) {
-            console.error('删除失败:', e);
+            console.error('Delete failed:', e);
         }
     }
 };
 
-// 导出全局函数
+// Export global functions
 window.VibeCoding = {
     scrollToElement,
     showNotification,

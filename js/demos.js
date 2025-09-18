@@ -1,8 +1,8 @@
-// Vibe Coding 演示功能
+// Vibe Coding Demo Functionality
 
-// 显示指定的演示
+// Show specified demo
 function showDemo(demoType) {
-    // 隐藏所有演示
+    // Hide all demos
     const demos = ['javascript-demo', 'python-demo', 'data-processing-demo'];
     demos.forEach(demo => {
         const element = document.getElementById(demo);
@@ -11,7 +11,7 @@ function showDemo(demoType) {
         }
     });
     
-    // 重置所有标签页样式
+    // Reset all tab styles
     const tabs = ['js-tab', 'python-tab', 'data-tab'];
     tabs.forEach(tab => {
         const element = document.getElementById(tab);
@@ -20,25 +20,25 @@ function showDemo(demoType) {
         }
     });
     
-    // 显示选中的演示
+    // Show selected demo
     const selectedDemo = document.getElementById(demoType + '-demo');
     if (selectedDemo) {
         selectedDemo.classList.remove('hidden');
     }
     
-    // 更新选中的标签页样式
+    // Update selected tab style
     const selectedTab = document.getElementById(demoType + '-tab');
     if (selectedTab) {
         selectedTab.className = 'px-6 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors';
     }
     
-    // 添加淡入动画
+    // Add fade-in animation
     if (selectedDemo) {
         selectedDemo.classList.add('fade-in');
     }
 }
 
-// 处理成绩数据
+// Process grade data
 function processScores() {
     const input = document.getElementById('scores-input');
     const output = document.getElementById('scores-output');
@@ -49,7 +49,7 @@ function processScores() {
     }
     
     try {
-        // 解析输入数据
+        // Parse input data
         const scoresText = input.value.trim();
         const scores = scoresText.split(',').map(s => parseFloat(s.trim())).filter(s => !isNaN(s));
         
@@ -57,7 +57,7 @@ function processScores() {
             throw new Error('请输入有效的数字');
         }
         
-        // 验证分数范围
+        // Validate score range
         const validScores = scores.filter(score => score >= 0 && score <= 100);
         const invalidScores = scores.filter(score => score < 0 || score > 100);
         
@@ -65,7 +65,7 @@ function processScores() {
             throw new Error('没有有效的分数（0-100范围）');
         }
         
-        // 计算统计信息
+        // Calculate statistics
         const average = validScores.reduce((sum, score) => sum + score, 0) / validScores.length;
         const max = Math.max(...validScores);
         const min = Math.min(...validScores);
